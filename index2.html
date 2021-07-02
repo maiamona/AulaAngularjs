@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./bootstrap/js/angular.min.js"></script>
+    <script src="./bootstrap/js/angular-messages.min.js"></script>
+    <script src="./bootstrap/js/angular-resource.min.js"></script>
+    <script src="./bootstrap/js/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    
+    <style>
+        html, body, input, select, textarea{
+            font-size: 1.05em !important;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        .botao-titulo{
+            display: flex;
+            justify-content: space-between;
+            background: green;
+            color: #fff;
+            width: 100%;
+        }
+        .botao-1,
+        .botao-2{
+            background: #fff;
+            
+        }
+        .botao-1 a,
+        .botao-2 a{
+            color: black;
+        }
+        .input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*Novo*/
+        .lista {
+  list-style-type: none;
+  margin: 0 359px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.lista-item {
+  float: left;
+}
+
+.lista-item a {
+  display: block;
+  color: white !important;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lista-item a:hover {
+  background-color: #111;
+}
+
+.name{
+    float: right;
+}
+
+.clr{
+     clear: both;
+ }
+ @media (max-width: 1024px){
+    .lista{
+        margin: 0;
+    }
+ }
+
+ @media (max-width: 378px){
+    .lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+    }
+ }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+<div ng-view></div>
+<div class="clr"></div>
+<ul class="lista">
+    <li class="lista-item"><a ng-click="funcao(Home)">Home</a></li>
+    <li class="lista-item"><a ng-click="funcao(News)">News</a></li>
+    <li class="lista-item"><a ng-click="funcao(Contact)">Contact</a></li>
+    <li class="lista-item"><a ng-click="funcao(About)">About</a></li>
+  </ul>
+  
+</div>
+<script src="./bootstrap/js/script.js"></script>
+    <script src="./bootstrap/js/app.js"></script>
+    <script src="./bootstrap/js/novo.js"></script>
+</body>
+
+</html>
